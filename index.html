@@ -127,7 +127,7 @@ background-size: 100% 100%;
                 dC = dC.getDay();
                 console.log(dC)
                 dC+=1;
-    		    document.getElementById("menuTitle").innerHTML = "Tomorrow's Lunch"
+    		    document.getElementById("menuTitle").innerHTML = "Tomorrow's Lunch";
     		    document.getElementById("menuTitle").style.textDecoration = "underline";
     		    document.getElementById("menuTitle").style.fontSize = "large";
     		    if (dC==1) {
@@ -352,12 +352,17 @@ background-size: 100% 100%;
          }
 	}
     
-    mondayLunch = "Grilled Cheese Sandwiches with Tomato Basil Soup and Seasonal Grain Salad";
-    tuesdayLunch = "Chicken Tenders with House-made Dips, Potato Salad, and Seasonal Greens";
-    wednesdayLunch = "Niman Ranch Beef or Veggie Stew with Brown Rice & Kale Salad";
-    thursdayLunch = "Cheddar Baked Potato Bar with Bacon, Cheddar, and Veggie Chili";
-    fridayLunch = "Chicken or Veggie Tikka Masala Wrap with Spiced Basmati Rice & Seasonal Raita";
-    
+    mondayLunch = "No School – Presidents Day";
+    tuesdayLunch = "No School – Professional Development Day";
+    wednesdayLunch = "Hot Dogs or Veggie Dogs on Brioche Bun with Oven Baked Fries and Broccoli";
+    thursdayLunch = "Chicken or Avocado Caesar Salad w/Roasted Vegetables and Bread and Cheese";
+    fridayLunch = "Bean & Cheese Burritos with Citrus Cabbage Salad and Mexican Rice";
+
+    mondayLunch = "&nbsp;" + mondayLunch
+    tuesdayLunch = "&nbsp;" + tuesdayLunch
+    wednesdayLunch = "&nbsp;" + wednesdayLunch
+    thursdayLunch = "&nbsp;" + thursdayLunch
+    fridayLunch = "&nbsp;" + fridayLunch
     
     /* Options:
     Monday: "normal", "first day"
@@ -574,13 +579,16 @@ background-size: 100% 100%;
 	    }
 	}
 	function saturday(namaste){
-		create_bar("00:00", "24:00", "Saturday");
+  	    create_bar("00:00", "24:00", "Saturday");
+	    blockCount = 1
 	}
 	function sunday(namaste){
 	    create_bar("00:00", "24:00", "Sunday");
+	    blockCount = 1
 	}
 	function summer(namaste){
 	    create_bar("00:00", "24:00", "Summer!");
+	    blockCount = 1
 	}
 	
 	
@@ -633,6 +641,11 @@ background-size: 100% 100%;
 		} else if (d == 6) {
 		    saturday();
 		}
+		document.getElementById("mondayLunch").innerHTML = "&nbsp;" + mondayLunch;
+		document.getElementById("tuesdayLunch").innerHTML = "&nbsp; " + tuesdayLunch;
+		document.getElementById("wednesdayLunch").innerHTML = "&nbsp; " + wednesdayLunch;
+		document.getElementById("thursdayLunch").innerHTML = "&nbsp; " + thursdayLunch;
+		document.getElementById("fridayLunch").innerHTML = "&nbsp; " + fridayLunch;
 		setInterval("setup_time()", 1);
 		console.log(blockCount)
 	}
@@ -703,7 +716,6 @@ background-size: 100% 100%;
 	    	document.getElementById("dBlock").style.display = "none";
 	    	document.getElementById("eBlock").style.display = "none";
 	    	document.getElementById("fBlock").style.display = "none";
-	    	document.getElementById("toggleButton").value = "Show";
 	    } else if (document.getElementById("aBlockTitle").style.display == "none") {
 	        document.getElementById("aBlockTitle").style.display = "initial";
 	        document.getElementById("bBlockTitle").style.display = "initial";
@@ -727,17 +739,20 @@ background-size: 100% 100%;
 
 <br>
 <hr>
-<br>
-<input id="toggleButton" style="float:right" type="button" onclick="show()" value="Show">
-<span style="float:right"><big>Customize your schedule! &nbsp;</big></span> 
-<span style="float:left" value="Lunch Menu" id="menuTitle"><big><u>Lunch Menu</u></big></span>
-<br>
-<br>
-<span type="text" value ="No School" id="lunchMenu" style="float:left;">No School</span>
+<input type="button"class="button"id="toggleButton"onclick="show()"style="float:right"value="Customize Schedule"></input>
+<span style="float:left">&nbsp;</span>
+<span style="float:left" value="Lunch Menu" id="menuTitle"><big><u></u></big></span>
 <br>
 <br>
+<span type="text" value ="&nbsp;No School" id="lunchMenu" style="float:left;">No School</span>
 <br>
-<span style="color:red;float:left;">Want to stay up to date on morning meeting announcements? Check out the <a href="https://docs.google.com/document/d/1-oEtiQVcyADsh-71Neilmi2U-HHu3GPoipTOuCt5NyA/edit?usp=sharing">Morning Meeting Announcement Digest</a>!</span>
+<br>
+<input type="button"class="button"id="toggleButton2" style="float:left"value="Week Lunch Menu"></input>
+<br>
+<br>
+<br>
+<br>
+<span style="color:red;float:left;">&nbsp;Want to stay up to date on morning meeting announcements? Check out the <a href="https://docs.google.com/document/d/1-oEtiQVcyADsh-71Neilmi2U-HHu3GPoipTOuCt5NyA/edit?usp=sharing">Morning Meeting Announcement Digest</a>!</span>
 
 
 <!-- The Modal -->
@@ -774,6 +789,124 @@ background-size: 100% 100%;
   </div>
 
 </div>
+<!-- The Modal -->
+<div id="myModal2" class="modal2">
+
+  <!-- Modal content -->
+  <div class="modal-content2">
+    <span type="text" value ="No Data" style="float:left;"><strong>Monday:</strong></span>
+    <span type="text" value ="No Data" id="mondayLunch" style="float:left;color:white;"></span>
+    <br>
+    <br>
+    <span type="text" value ="No Data" style="float:left;"><strong>Tuesday:</strong></span>
+    <span type="text" value ="No Data" id="tuesdayLunch" style="float:left;color:white;"></span>
+    <br>
+    <br>
+    <span type="text" value ="No Data" style="float:left;"><strong>Wednesday:</strong></span>
+    <span type="text" value ="No Data" id="wednesdayLunch" style="float:left;color:white;"></span> 
+    <br>
+    <br>
+    <span type="text" value ="No Data" style="float:left;"><strong>Thursday:</strong></span>
+    <span type="text" value ="No Data" id="thursdayLunch" style="float:left;color:white;"></span>
+    <br>
+    <br>
+    <span type="text" value ="No Data" style="float:left;"><strong>Friday:</strong></span>
+    <span type="text" value ="No Data" id="fridayLunch" style="float:left;color:white;"></span>
+    <br>
+    <br>
+    <br>
+    <span class="close2">Close</span>
+  </div>
+
+</div>
+<style>
+    /* The Modal (background) */
+.modal2 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 5; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.button {
+  background-color: #232d61;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+/* Modal Content/Box */
+.modal-content2 {
+  background-color: #5C77FF;
+  margin: 5% auto; /* 15% from the top and centered */
+  padding: 30px;
+  border: 2px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close2 {
+  color: #FFF;
+  font-size: 14px;
+  font-weight: bold;
+  display:table;
+  margin:0 auto;
+}
+
+.close2:hover,
+.close2:focus {
+  color: grey;
+  text-decoration: none;
+  cursor: pointer;
+} 
+/* Modal Content */
+.modal-content2 {
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: animatetop;
+  animation-duration: 0.5s
+}
+</style>
+<script>
+    // Get the modal
+var modal2 = document.getElementById("myModal2");
+
+// Get the button that opens the modal
+var btn2 = document.getElementById("toggleButton2");
+
+// Get the <span> element that closes the modal
+var span2 = document.getElementsByClassName("close2")[0];
+// When the user clicks on the button, open the modal
+
+
+// When the user clicks on <span> (x), close the modal
+span2.onclick = function() {
+  modal2.style.display = "none";
+}
+btn2.onclick = function() {
+  modal2.style.display = "block"; 
+} 
+
+// When the user clicks anywhere outside of the modal, close it
+/*window.onclick = function(event) {
+  if (event.target == modal) {
+    show();
+    restart();
+    modal.style.display = "none";
+  }
+} */
+</script>
 
 <style>
     /* The Modal (background) */
@@ -862,6 +995,3 @@ span.onclick = function() {
 </body>
 
 </html>
-
-
-
