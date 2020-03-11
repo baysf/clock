@@ -471,14 +471,15 @@ background-size: 100% 100%;
     		document.getElementById("lunchMenu").innerHTML = wednesdayLunch;
 	    } else {
     		if (wednesdayType == "normal"){
-    		    create_bar("08:10", "08:30", "Advisory");
-        		create_bar("08:35", "09:55", bBlock);
-        		create_bar("10:05", "11:25", cBlock);
-        		create_bar("11:25", "12:20", "Lunch");
-        		create_bar("12:20", "13:40", dBlock);
-        		create_bar("13:45", "15:05", eBlock);
-        		create_bar("15:05", "15:30", "Tutorial");
-        		blockCount = 7
+    		    	create_bar("08:10", "09:10", "9&10 FCD Presentation");
+			create_bar("08:45", "09:10", "11 Class Meeting");
+        		create_bar("09:15", "10:25", bBlock);
+        		create_bar("10:30", "11:40", cBlock);
+        		create_bar("11:40", "12:35", "Lunch");
+        		create_bar("12:35", "13:45", dBlock);
+        		create_bar("13:50", "15:00", eBlock);
+        		create_bar("15:00", "15:30", "Tutorial");
+        		blockCount = 8
         		document.getElementById("lunchMenu").innerHTML = wednesdayLunch;
     		} else if (wednesdayType == "thanksgiving"){
     		    create_bar("08:10", "09:30", "B Block");
