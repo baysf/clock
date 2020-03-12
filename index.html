@@ -565,13 +565,14 @@ background-size: 100% 100%;
     		document.getElementById("lunchMenu").innerHTML = fridayLunch;
 	    } else {
     		if (fridayType == "normal"){
-    		    create_bar("08:10", "08:30", "Morning Meeting");
-        	    create_bar("08:35", "09:55", cBlock);
-        		create_bar("10:05", "11:25", dBlock);
-        		create_bar("11:25", "12:20", "Lunch");
-        		create_bar("12:20", "13:40", eBlock);
-        		create_bar("13:45", "15:05", fBlock);
-        		blockCount = 6
+    		    	create_bar("09:00", "09:30", aBlock);
+			create_bar("09:40", "10:10", bBlock);
+        	   	create_bar("10:20", "10:50", cBlock);
+        		create_bar("11:00", "11:30", dBlock);
+        		create_bar("11:30", "12:30", "Lunch");
+        		create_bar("12:30", "13:00", eBlock);
+        		create_bar("13:10", "13:40", fBlock);
+        		blockCount = 7
         		document.getElementById("lunchMenu").innerHTML = fridayLunch;
     		} else if (fridayType == "lateStart"){
     		    create_bar("08:50", "09:10", "Morning Meeting");
