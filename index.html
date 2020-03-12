@@ -353,6 +353,14 @@ background-size: 100% 100%;
              divToClear = 'div_name'.concat(div_loop);
              document.getElementById(divToClear).style.display = "none";
              div_loop += 1;
+         } if (blockCount>8){
+             divToClear = 'div_name'.concat(div_loop);
+             document.getElementById(divToClear).style.display = "none";
+             div_loop += 1;
+         } if (blockCount>9){
+             divToClear = 'div_name'.concat(div_loop);
+             document.getElementById(divToClear).style.display = "none";
+             div_loop += 1;
          }
 	}
     
@@ -511,14 +519,17 @@ background-size: 100% 100%;
     		document.getElementById("lunchMenu").innerHTML = thursdayLunch;
 	    } else {
     		if (thursdayType == "normal"){
-    		    create_bar("08:10", "08:30", "Morning Meeting");
-        		create_bar("08:35", "09:55", fBlock);
-        		create_bar("09:55", "10:35", "Clubs");
-        		create_bar("10:40", "12:00", aBlock);
+    		        create_bar("08:35", "09:00", "Morning Meeting");
+        		create_bar("09:00", "10:20", fBlock);
+        		create_bar("10:25", "10:45", aBlock);
+        		create_bar("10:50", "11:30", "Clubs");
+			create_bar("11:35", "11:55", bBlock);
         		create_bar("12:00", "12:55", "Lunch");
-        		create_bar("12:55", "14:15", bBlock);
+        		create_bar("12:55", "13:15", cBlock);
+			create_bar("13:20", "13:40", dBlock);
+			create_bar("13:45", "14:05", eBlock);
         		create_bar("14:15", "14:45", "Tutorial");
-        		blockCount = 7
+        		blockCount = 10
         		document.getElementById("lunchMenu").innerHTML = thursdayLunch;
     		} else if (thursdayType == "reportCards"){
     		    create_bar("08:10", "08:30", "Morning Meeting");
