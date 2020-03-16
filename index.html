@@ -386,6 +386,7 @@ background-size: 100% 100%;
     
     var immersives = false;
     var projectWeek = false;
+    var onlineClass = true;
     
     mondayType = "normal"
     tuesdayType = "normal"
@@ -404,10 +405,18 @@ background-size: 100% 100%;
     		create_bar("08:35", "10:05", aBlock);
     		create_bar("10:20", "11:50", bBlock);
     		create_bar("11:50", "12:45", "Lunch");
-    	    create_bar("12:45", "14:15", cBlock);
-    	    create_bar("14:15", "14:45", "Tutorial");
-    	    blockCount = 6
-    	    document.getElementById("lunchMenu").innerHTML = mondayLunch;
+    	    	create_bar("12:45", "14:15", cBlock);
+    	    	create_bar("14:15", "14:45", "Tutorial");
+    	    	blockCount = 6
+    	   	document.getElementById("lunchMenu").innerHTML = mondayLunch;
+	    } else if (onlineClass == true){
+    		create_bar("09:00", "10:20", aBlock);
+    		create_bar("10:30", "11:50", bBlock);
+    		create_bar("11:50", "12:30", "Lunch");
+    	    	create_bar("12:30", "13:50", cBlock);
+    	    	create_bar("14:00", "15:20", dBlock);
+    	    	blockCount = 5
+    	   	document.getElementById("lunchMenu").innerHTML = mondayLunch;
 	    } else {
     		if (mondayType == "normal"){
     		    create_bar("08:10", "08:30", "Morning Meeting");
@@ -446,6 +455,14 @@ background-size: 100% 100%;
     		create_bar("14:15", "14:45", "Tutorial");
     		blockCount = 6
     		document.getElementById("lunchMenu").innerHTML = tuesdayLunch;
+	    } else if (onlineClass == true){
+    		create_bar("09:00", "10:20", eBlock);
+    		create_bar("10:30", "11:50", fBlock);
+    		create_bar("11:50", "12:30", "Lunch/Clubs");
+    	    	create_bar("12:30", "13:50", aBlock);
+    	    	create_bar("14:00", "15:20", "Tutorial");
+    	    	blockCount = 5
+    	   	document.getElementById("lunchMenu").innerHTML = tuesdayLunch;
 	    } else {
     		if (tuesdayType == "normal"){
     		    	create_bar("08:10", "09:10", "11&12 FCD Presentation");
@@ -481,6 +498,15 @@ background-size: 100% 100%;
     		create_bar("12:00", "14:30", bBlock);
     		blockCount = 3
     		document.getElementById("lunchMenu").innerHTML = wednesdayLunch;
+	    } else if (onlineClass == true){
+		create_bar("08:30", "09:00", "Advisory");
+    		create_bar("09:00", "10:20", bBlock);
+    		create_bar("10:30", "11:50", cBlock);
+    		create_bar("11:50", "12:30", "Lunch");
+    	    	create_bar("12:30", "13:50", dBlock);
+    	    	create_bar("14:00", "15:20", eBlock);
+    	    	blockCount = 6
+    	   	document.getElementById("lunchMenu").innerHTML = wednesdayLunch;
 	    } else {
     		if (wednesdayType == "normal"){
     		    	create_bar("08:10", "09:10", "9&10 FCD Presentation");
@@ -517,6 +543,14 @@ background-size: 100% 100%;
         		create_bar("12:00", "14:30", dBlock);
         		blockCount = 3
     		document.getElementById("lunchMenu").innerHTML = thursdayLunch;
+	    } else if (onlineClass == true){
+    		create_bar("09:00", "10:20", fBlock);
+    		create_bar("10:30", "11:50", aBlock);
+    		create_bar("11:50", "12:30", "Lunch/Clubs");
+    	    	create_bar("12:30", "13:50", bBlock);
+    	    	create_bar("14:00", "15:20", "Tutorial");
+    	    	blockCount = 5
+    	   	document.getElementById("lunchMenu").innerHTML = thursdayLunch;
 	    } else {
     		if (thursdayType == "normal"){
     		        create_bar("08:35", "09:00", "Advisory");
@@ -563,6 +597,14 @@ background-size: 100% 100%;
         		create_bar("12:00", "14:30", fBlock);
         		blockCount = 3
     		document.getElementById("lunchMenu").innerHTML = fridayLunch;
+	    } else if (onlineClass == true){
+    		create_bar("09:00", "10:20", cBlock);
+    		create_bar("10:30", "11:50", dBlock);
+    		create_bar("11:50", "12:30", "Lunch/Clubs");
+    	    	create_bar("12:30", "13:50", eBlock);
+    	    	create_bar("14:00", "15:20", fBlock);
+    	    	blockCount = 5
+    	   	document.getElementById("lunchMenu").innerHTML = tuesdayLunch;
 	    } else {
     		if (fridayType == "normal"){
     		    	create_bar("09:00", "09:30", aBlock);
