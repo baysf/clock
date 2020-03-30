@@ -410,16 +410,8 @@ background-size: 100% 100%;
     	    	blockCount = 6
     	   	document.getElementById("lunchMenu").innerHTML = mondayLunch;
 	    } else if (onlineClass == true){
-    		create_bar("09:00", "10:00", aBlock);
-		create_bar("10:00", "10:30", aBlock+"/Tutorial");
-		create_bar("10:30", "11:00", "Break");
-    		create_bar("11:00", "12:00", bBlock);
-		create_bar("12:00", "12:30", bBlock+"/Tutorial");
-    		create_bar("12:30", "13:30", "Lunch");
-    	    	create_bar("13:30", "14:30", cBlock);
-		create_bar("14:30", "15:00", cBlock+"/Tutorial");
-    	    	create_bar("15:00", "15:30", "Tutorial");
-    	    	blockCount = 9
+    		create_bar("00:00", "24:00", "No School");
+    	    	blockCount = 1
     	   	document.getElementById("lunchMenu").innerHTML = mondayLunch;
 	    } else {
     		if (mondayType == "normal"){
