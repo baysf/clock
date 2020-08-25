@@ -67,11 +67,11 @@ background-size: 100% 100%;
 
 	var diffDays1=(function(){
 		var oneDay = 24*60*60*1000; // hours minutes seconds milliseconds, makes milliseconds in a day
-		var secondDate = new Date(new Date("May 15, 2020")); //Creates the date on May 16th, 2018
+		var secondDate = new Date(new Date("May 15, 2021")); //Creates the date on May 16th, 2018
 		var firstDate = new Date(); //Creates the date at the current date
 		return Math.round(Math.abs((firstDate.getTime() - secondDate.getTime())/(oneDay))); //Sets diffDays1 to secondDate - first date (gets days till the first day of summer, May 18th)
 	})();
-	document.getElementById("htmldaystillend_date").innerHTML = "Days until May 15th 2020: " + (diffDays1 - 1); //Prints days till May 16th under the current date and time
+	document.getElementById("htmldaystillend_date").innerHTML = "Days until May 15th 2021: " + (diffDays1 - 1); //Prints days till May 16th under the current date and time
 
 
 	function setup_time() {
