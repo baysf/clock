@@ -95,7 +95,8 @@ background-size: 100% 100%;
         }else if(w==3){
             day = "Wednesday"
         }else if(w==4){
-            day = "Thursday"
+            day = "
+		"
         }else if(w==5){
             day = "Friday"
         }else if(w==6){
@@ -545,7 +546,8 @@ background-size: 100% 100%;
         		create_bar("12:00", "14:30", dBlock);
         		blockCount = 3
     		document.getElementById("lunchMenu").innerHTML = thursdayLunch;
-	    } else if (onlineClass == true){
+	    } 
+		/*else if (onlineClass == true){
 			create_bar("08:45", "10:05", aBlock);
 			create_bar("10:15", "11:35", bBlock);
 			create_bar("11:35", "12:05", "1:1 Advisory");
@@ -553,6 +555,18 @@ background-size: 100% 100%;
 			create_bar("13:05", "14:25", cBlock);
 			create_bar("14:25", "15:00", "Break");
 			create_bar("15:00", "17:00", "Clubs/Olympics");
+			blockCount = 7
+    	   	document.getElementById("lunchMenu").innerHTML = thursdayLunch;
+	    } */
+		
+		else if (onlineClass == true){
+			create_bar("08:45", "10:05", aBlock);
+			create_bar("10:15", "11:35", bBlock);
+			create_bar("11:35", "11:55", "Morning Meeting");
+			create_bar("11:55", "12:55", "Lunch");
+			create_bar("12:55", "14:15", cBlock);
+			create_bar("14:15", "14:45", "Tutorial/Travel");
+			create_bar("15:00", "16:30", "12th on Campus");
 			blockCount = 7
     	   	document.getElementById("lunchMenu").innerHTML = thursdayLunch;
 	    } else {
