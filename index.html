@@ -410,14 +410,22 @@ background-size: 100% 100%;
     	    	blockCount = 6
     	   	document.getElementById("lunchMenu").innerHTML = mondayLunch;
 	    } else if (onlineClass == true){
-    		create_bar("08:45", "11:15", aBlock);
+    		/*create_bar("08:45", "11:15", aBlock);
 		create_bar("11:25", "11:45", "Morning Meeting");
 		create_bar("11:45", "12:45", "Lunch");
 		create_bar("12:45", "15:15", bBlock);
 		create_bar("15:20", "15:45", "Tutorial");
 		create_bar("16:00", "17:00", "Activities");
     	    	blockCount = 6
+    	   	document.getElementById("lunchMenu").innerHTML = mondayLunch;*/
+		create_bar("08:45", "11:15", aBlock);
+		create_bar("11:15", "12:15", "Lunch");
+		create_bar("12:15", "14:45", bBlock);
+		create_bar("14:45", "15:30", "Tutorial/Travel");
+		create_bar("15:30", "17:00", "9th on Campus");
+    	    	blockCount = 5
     	   	document.getElementById("lunchMenu").innerHTML = mondayLunch;
+		
 	    } else {
     		if (mondayType == "normal"){
     		    create_bar("08:10", "08:30", "Morning Meeting");
