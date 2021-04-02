@@ -628,13 +628,12 @@ background-size: 100% 100%;
     	   	document.getElementById("lunchMenu").innerHTML = tuesdayLunch;*/
 		create_bar("08:45", "10:15", fBlock);
 		create_bar("10:30", "12:00", eBlock);
-		create_bar("12:00", "13:00", "Lunch");
-		create_bar("13:00", "13:25", "Morning Meeting");
-		create_bar("13:30", "15:00", dBlock);
-		create_bar("15:05", "15:35", "Tutorial");
-		create_bar("15:45", "17:00", "Activities");
-    	    	blockCount = 7
-    	   	document.getElementById("lunchMenu").innerHTML = tuesdayLunch;
+		create_bar("12:00", "12:45", "Lunch");
+		create_bar("12:45", "13:10", "Morning Meeting");
+		create_bar("13:10", "14:40", dBlock);
+		create_bar("14:45", "15:15", "Tutorial");
+    	    	blockCount = 6
+    	   	document.getElementById("lunchMenu").innerHTML = fridayLunch;
 	    } else {
     		if (fridayType == "normal"){
     		    	create_bar("09:00", "09:30", aBlock);
